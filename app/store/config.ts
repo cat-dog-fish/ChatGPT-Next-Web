@@ -52,7 +52,7 @@ export type ModelConfig = ChatConfig["modelConfig"];
 const ENABLE_GPT4 = true;
 
 export const ALL_MODELS = [
-   {
+  {
     name: "gpt-4",
     available: ENABLE_GPT4,
   },
@@ -156,7 +156,7 @@ export const useAppConfig = create<ChatConfigStore>()(
         if (version === 2) return persistedState as any;
 
         const state = persistedState as ChatConfig;
-        state.modelConfig.sendMemory = false;
+        state.modelConfig.sendMemory = true;
         state.modelConfig.historyMessageCount = 4;
         state.modelConfig.compressMessageLengthThreshold = 500;
         state.dontShowMaskSplashScreen = false;
