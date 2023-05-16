@@ -118,10 +118,16 @@ export function SideBar(props: { className?: string }) {
         shouldNarrow && styles["narrow-sidebar"]
       }`}
     >
+      
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>ChatGPT Next</div>
+        <div className={styles["sidebar-title"]}>
+          <a href={"https://oneperfect.cn/?p=422"}  target={"_blank"}>
+          永久地址
+        </a>
+          点击上方永久地址，加入微信群，享受更多福利
+        </div>
         <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
+          本地址不定期更换，可以收藏上面的永久地址。
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
@@ -156,6 +162,26 @@ export function SideBar(props: { className?: string }) {
         <ChatList narrow={shouldNarrow} />
       </div>
 
+      
+      <div className={styles["sidebar-header"]}>
+
+
+
+
+        <div className={styles["sidebar-sub-title"]}>
+          因为共享key会有速率限制，所以请耐心等待。
+          获取自己的
+          <a href={"https://first.xiaowenzi.xyz"}  target={"_blank"}>
+        专属key，
+        </a>
+          可以体验飞速的回答。
+        </div>
+
+      </div>
+      
+      
+      
+      
       <div className={styles["sidebar-tail"]}>
         <div className={styles["sidebar-actions"]}>
           <div className={styles["sidebar-action"] + " " + styles.mobile}>
