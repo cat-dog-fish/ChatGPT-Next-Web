@@ -34,9 +34,9 @@ export const DEFAULT_CONFIG = {
     temperature: 0.5,
     max_tokens: 2000,
     presence_penalty: 0,
-    sendMemory: true,
+    sendMemory: false,
     historyMessageCount: 4,
-    compressMessageLengthThreshold: 1000,
+    compressMessageLengthThreshold: 500,
   },
 };
 
@@ -52,22 +52,7 @@ export type ModelConfig = ChatConfig["modelConfig"];
 const ENABLE_GPT4 = true;
 
 export const ALL_MODELS = [
-  {
-    name: "gpt-4",
-    available: ENABLE_GPT4,
-  },
-  {
-    name: "gpt-4-0314",
-    available: ENABLE_GPT4,
-  },
-  {
-    name: "gpt-4-32k",
-    available: ENABLE_GPT4,
-  },
-  {
-    name: "gpt-4-32k-0314",
-    available: ENABLE_GPT4,
-  },
+  
   {
     name: "gpt-3.5-turbo",
     available: true,
@@ -156,9 +141,9 @@ export const useAppConfig = create<ChatConfigStore>()(
         if (version === 2) return persistedState as any;
 
         const state = persistedState as ChatConfig;
-        state.modelConfig.sendMemory = true;
+        state.modelConfig.sendMemory = false;
         state.modelConfig.historyMessageCount = 4;
-        state.modelConfig.compressMessageLengthThreshold = 1000;
+        state.modelConfig.compressMessageLengthThreshold = 500;
         state.dontShowMaskSplashScreen = false;
 
         return state;
