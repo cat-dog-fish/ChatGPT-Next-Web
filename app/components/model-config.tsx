@@ -88,42 +88,10 @@ export function ModelConfigList(props: {
         ></InputRange>
       </ListItem>
 
-      <ListItem
-        title={Locale.Settings.HistoryCount.Title}
-        subTitle={Locale.Settings.HistoryCount.SubTitle}
-      >
-        <InputRange
-          title={props.modelConfig.historyMessageCount.toString()}
-          value={props.modelConfig.historyMessageCount}
-          min="0"
-          max="32"
-          step="1"
-          onChange={(e) =>
-            props.updateConfig(
-              (config) => (config.historyMessageCount = e.target.valueAsNumber),
-            )
-          }
-        ></InputRange>
-      </ListItem>
 
-      <ListItem
-        title={Locale.Settings.CompressThreshold.Title}
-        subTitle={Locale.Settings.CompressThreshold.SubTitle}
-      >
-        <input
-          type="number"
-          min={500}
-          max={4000}
-          value={props.modelConfig.compressMessageLengthThreshold}
-          onChange={(e) =>
-            props.updateConfig(
-              (config) =>
-                (config.compressMessageLengthThreshold =
-                  e.currentTarget.valueAsNumber),
-            )
-          }
-        ></input>
-      </ListItem>
+
+
+
       <ListItem title={Locale.Memory.Title} subTitle={Locale.Memory.Send}>
         <input
           type="checkbox"
